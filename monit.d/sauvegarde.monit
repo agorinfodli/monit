@@ -1,0 +1,3 @@
+  check program Sauvegarde with path /etc/monit.d/script/sauvegarde.sh
+    if status != 0 then alert
+

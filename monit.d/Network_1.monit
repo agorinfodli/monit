@@ -1,0 +1,14 @@
+ check network IP-Lan with interface eno1             
+   if failed link then alert                          
+   if changed link then alert                         
+   if saturation > 90% then alert                     
+   if download > 10 MB/s then alert                   
+   if total uploaded > 20 GB in last hour then alert   
+                                                      
+# check network IP-Agha with interface eno4             
+#   if failed link then alert                          
+#   if changed link then alert                         
+#   if saturation > 95% then alert                     
+#   if download > 10 MB/s then alert                   
+#   if total uploaded > 20 GB in last hour then alert   
+                                                      

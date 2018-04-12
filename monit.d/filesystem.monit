@@ -1,0 +1,8 @@
+check filesystem root with path /
+        if space usage > 70% then alert
+
+check filesystem agorinfo with path /agorinfo
+        if space usage > 70% then alert
+
+check filesystem cxb with path /cxb
+        if space usage > 95% then alert

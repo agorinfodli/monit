@@ -1,0 +1,13 @@
+check process smbd with pidfile /var/run/smbd.pid
+   group samba
+   start program = "/usr/bin/systemctl restart smb.service"
+   stop program = "/usr/bin/systemctl stop smb.service"
+   if failed host localhost port 139 type TCP  then restart
+
+check process nmbd with pidfile /var/run/nmbd.pid
+   group samba
+   start program = "/usr/bin/systemctl restart smb.service"
+   stop program = "/usr/bin/systemctl stop smb.service"
+   if failed host localhost port 138 type UDP  then restart
+   if failed host localhost port 137 type UDP  then restart
+

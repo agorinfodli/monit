@@ -1,0 +1,13 @@
+
+
+
+ check process incrond with pidfile /var/run/incrond.pid      
+   start program  = "/usr/bin/systemctl start incrond.service"                  
+   stop program  = "/usr/bin/systemctl stop incrond.service"                   
+   if cpu > 60% for 2 cycles then alert                                  
+   if cpu > 80% for 5 cycles then restart                                
+   if totalmem > 200.0 MB for 5 cycles then restart                      
+   if children > 250 then restart                                        
+   if loadavg(5min) greater than 10 for 8 cycles then restart               
+   group processus                                                          
+
